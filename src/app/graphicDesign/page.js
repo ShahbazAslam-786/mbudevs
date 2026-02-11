@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react";
-import { useBrand } from "../component/contextData";
 import onlineGif from "../../../public/assets/online.gif"
 import landGif from "../../../public/assets/land.gif"
 import siteGif from "../../../public/assets/site.gif"
@@ -25,7 +24,7 @@ const cardData = [
     },
     {
         title: "Mobile App Design",
-        description: "Eye-catching mobile app designs enhance user convenience, making them more effective for your business. BizzDevs crafts intuitive application designs for iOS and Android, driving customer engagement and addressing key business challenges.",
+        description: "Eye-catching mobile app designs enhance user convenience, making them more effective for your business. MBUDevs crafts intuitive application designs for iOS and Android, driving customer engagement and addressing key business challenges.",
         image: siteGif,
         alt: "Mobile app design"
     },
@@ -38,7 +37,6 @@ const cardData = [
 ];
 
 const GraphicDesign = () => {
-    const { brand } = useBrand()
     const [expanded, setExpanded] = useState(Array(cardData.length).fill(false));
 
     const toggleReadMore = (index) => {
@@ -59,7 +57,7 @@ const GraphicDesign = () => {
                             Our Design For Your Business Achievement
                         </h1>
                         <p className="text-base max-w-2xl text-gray-900 mx-auto font-primary">
-                            At {brand === "MBUDev" ? "MBUDevs" : "BizzDevs"}, we offer top-tier graphic design services across Pakistan. Our skilled designers excel not only in graphic creation but also stay updated with the latest trends in web promotion. This unique combination allows us to deliver comprehensive solutions under one roof.{brand === "MBUDev" ? "MBUDevs" : "BizzDevs"} is renowned for crafting the finest logo designs in Pakistan.
+                            At MBUDevs, we offer top-tier graphic design services across Pakistan. Our skilled designers excel not only in graphic creation but also stay updated with the latest trends in web promotion. This unique combination allows us to deliver comprehensive solutions under one roof. MBUDevs is renowned for crafting the finest logo designs in Pakistan.
                         </p>
                     </div>
                 </div>
@@ -69,9 +67,9 @@ const GraphicDesign = () => {
                         One Stop Shop To Avail Of Full Graphic Designing Services
                     </h2>
                     <p className="text-base font-primary mb-6 text-gray-900 px-4 sm:px-16 lg:px-[170px] leading-relaxed">
-                        Struggling to stand out in a crowded market? Establishing a strong online presence can be challenging, but there's no need to worry—we’ve got the solutions you need.
+                        Struggling to stand out in a crowded market? Establishing a strong online presence can be challenging, but there&apos;s no need to worry—we&apos;ve got the solutions you need.
                         <br />
-                        At {brand === "MBUDev" ? "MBUDevs" : "BizzDevs"} Technologies, we offer comprehensive graphic design services in Pakistan, focused on tackling visual branding challenges for businesses of all sizes. Our approach is driven by passion, transforming ideas into impactful designs.{" "}
+                        At MBUDevs Technologies, we offer comprehensive graphic design services in Pakistan, focused on tackling visual branding challenges for businesses of all sizes. Our approach is driven by passion, transforming ideas into impactful designs.{" "}
                         <span className="text-blue-500 font-primary text-base hover:text-gray-900 cursor-pointer">
                             make modern websites
                         </span>{" "}
@@ -82,10 +80,10 @@ const GraphicDesign = () => {
                         <span className="text-blue-500 hover:text-gray-900 text-base cursor-pointer font-primary">
                             Digital marketing
                         </span>{" "}
-                        It's all about capturing your audience's attention. Wondering how? The creativity of a skilled graphic designer plays a key role in promoting products or services, laying the foundation for strong brand awareness. Remember, in today's digital landscape, your brand's success relies heavily on how effectively you build and manage your online presence.
+                        It&apos;s all about capturing your audience&apos;s attention. Wondering how? The creativity of a skilled graphic designer plays a key role in promoting products or services, laying the foundation for strong brand awareness. Remember, in today&apos;s digital landscape, your brand&apos;s success relies heavily on how effectively you build and manage your online presence.
                         <br />
                         <br />
-                        To support your brand's growth and visibility, we bring together the best graphic design talent in Pakistan. Our top priority is customer satisfaction, which is why we deliver high-quality, competitive, and tailored graphic design services that align perfectly with your business needs.
+                        To support your brand&apos;s growth and visibility, we bring together the best graphic design talent in Pakistan. Our top priority is customer satisfaction, which is why we deliver high-quality, competitive, and tailored graphic design services that align perfectly with your business needs.
                         <br />
                         <br />
                     </p>
@@ -97,9 +95,9 @@ const GraphicDesign = () => {
                             Flyer and Brochures
                         </h2>
                         <p className="text-base font-primary mb-6 text-gray-900 md:pl-[170px] pr-4 leading-relaxed">
-                            Unique flyer designs are often overlooked in Pakistan, and we're here to introduce the style and sophistication your brochures need to stand out. If you're searching for eye-catching flyers and brochures, trust Elexoft to handle everything for your convenience.
+                            Unique flyer designs are often overlooked in Pakistan, and we&apos;re here to introduce the style and sophistication your brochures need to stand out. If you&apos;re searching for eye-catching flyers and brochures, trust Elexoft to handle everything for your convenience.
 
-                            Not only will we deliver modern and innovative designs, but we'll also craft a strategic marketing plan that transforms your branding and advertising efforts. With the expertise of our top-tier logo and graphic designers, we'll present your message in a visually striking and compelling way, ensuring it captures attention while leaving a lasting impression.
+                            Not only will we deliver modern and innovative designs, but we&apos;ll also craft a strategic marketing plan that transforms your branding and advertising efforts. With the expertise of our top-tier logo and graphic designers, we&apos;ll present your message in a visually striking and compelling way, ensuring it captures attention while leaving a lasting impression.
                         </p>
                     </div>
                     <div className="w-full md:w-1/3">
@@ -109,6 +107,7 @@ const GraphicDesign = () => {
                             className="mx-auto"
                             width={500}   // adjust width as needed
                             height={300}  // adjust height as needed
+                            sizes="(max-width: 640px) 70vw, (max-width: 768px) 75vw, 33vw"
                         />
                     </div>
                 </div>
@@ -120,6 +119,7 @@ const GraphicDesign = () => {
                             alt="CRM"
                             width={500} // adjust width as needed
                             height={300} // adjust height as needed
+                            sizes="(max-width: 640px) 70vw, (max-width: 768px) 75vw, 33vw"
                             className="w-full"
                         />
                     </div>
@@ -128,9 +128,9 @@ const GraphicDesign = () => {
                             Logo Design
                         </h2>
                         <p className="text-base font-primary mb-6 text-gray-900 md:pr-[170px] pl-2 leading-relaxed">
-                            {brand === "MBUDev" ? "MBUDevs" : "BizzDevs"} is your go-to destination for outstanding logo designs, equipped with everything needed to create impactful and memorable brand identities. We’ll elevate your business by crafting a distinctive logo that establishes your presence across Pakistan.
+                            MBUDevs is your go-to destination for outstanding logo designs, equipped with everything needed to create impactful and memorable brand identities. We&apos;ll elevate your business by crafting a distinctive logo that establishes your presence across Pakistan.
 
-                            Many businesses struggle with logos that fail to communicate effectively, leading to branding challenges. Our priority is to design logos that leave a lasting impression—instantly recognizable and symbolic of your organization’s values. With {brand === "MBUDev" ? "MBUDevs" : "BizzDevs"}, your logo won't just represent your brand; it will become a mark of elegance and excellence.
+                            Many businesses struggle with logos that fail to communicate effectively, leading to branding challenges. Our priority is to design logos that leave a lasting impression—instantly recognizable and symbolic of your organization&apos;s values. With MBUDevs, your logo won&apos;t just represent your brand; it will become a mark of elegance and excellence.
                         </p>
                     </div>
                 </div>
@@ -142,7 +142,8 @@ const GraphicDesign = () => {
                                     <Image
                                         src={card.image}
                                         alt={card.alt}
-                                        className="w-[120px] h-[120px] object-contain"
+                                        className="w-24 h-24 sm:w-[120px] sm:h-[120px] object-contain"
+                                        sizes="(max-width: 640px) 96px, 120px"
                                     />
                                 </div>
                                 <div className="p-6">

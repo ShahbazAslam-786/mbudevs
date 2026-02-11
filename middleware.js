@@ -23,6 +23,6 @@ export function middleware(request) {
 
 export const config = {
   matcher: [
-    "/((?!_next|api|assets|favicon.ico|manifest.json|robots.txt|sitemap.xml|.*\\..*).*)",
+    "/((?!_next|api|assets|favicon.png|manifest.json|robots.txt|sitemap.xml|.*\\..*).*)",
   ],
 };

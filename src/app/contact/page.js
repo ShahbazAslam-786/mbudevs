@@ -74,12 +74,12 @@ const EnquiryLayout = () => {
         {
             number: "02",
             description:
-                "Following our analysis, we'll provide a detailed project estimation and timeline. You'll receive a tailored proposal outlining our offerings, ensuring they align seamlessly with your requirements.",
+                "Following our analysis, we&apos;ll provide a detailed project estimation and timeline. You&apos;ll receive a tailored proposal outlining our offerings, ensuring they align seamlessly with your requirements.",
         },
         {
             number: "03",
             description:
-                "We'll finalize a contract complying with your local laws. Watch your idea transform into a tangible product, crafted with expertise.",
+                "We&apos;ll finalize a contract complying with your local laws. Watch your idea transform into a tangible product, crafted with expertise.",
         },
     ]
 
@@ -91,7 +91,7 @@ const EnquiryLayout = () => {
                     <div className="w-full p-6 bg-gray-100 shadow-lg rounded-lg">
                         <h2 className="text-2xl font-bold mb-4 text-gray-900">Enquiry Form</h2>
                         <p className="text-gray-700 mb-6 text-sm sm:text-base">
-                            Looking to hire top-tier developers? Complete the form, and we'll reach out to you soon.
+                            Looking to hire top-tier developers? Complete the form, and we&apos;ll reach out to you soon.
                         </p>
                         <form ref={formRef} className="space-y-4" onSubmit={onSubmit}>
                             <input
@@ -146,7 +146,8 @@ const EnquiryLayout = () => {
                                         alt={expert.name}
                                         width={64}
                                         height={64}
-                                        className="rounded-full object-cover w-16 h-16"
+                                        sizes="(max-width: 640px) 48px, 64px"
+                                        className="rounded-full object-cover w-12 h-12 sm:w-16 sm:h-16"
                                     />
                                     <div>
                                         <h3 className="font-bold text-lg">{expert.name}</h3>

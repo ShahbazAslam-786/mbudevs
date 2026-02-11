@@ -1,12 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
 import TestimonialReviewList from "../data/testimonialReview";
 
 export const TestimonialReviewSlider = () => {
+  useEffect(() => {
+    import("react-multi-carousel/lib/styles.css");
+  }, []);
+
   const responsive = {
     extralargedesktop: {
       breakpoint: { max: 3000, min: 1801 },
@@ -76,7 +79,7 @@ export const TestimonialReviewSlider = () => {
                   src={item.src}
                   alt={item.alt}
                   fill
-                  sizes="(max-width: 640px) 56px, 48px"
+                  sizes="(max-width: 640px) 48px, 56px"
                   className="object-cover"
                 />
               </div>

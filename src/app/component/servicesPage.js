@@ -1,19 +1,14 @@
 "use client"
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ServicesItem from '../data/servicesitem'
 import '../style/Portfolio.css';
 import { useRouter } from "next/navigation";
-import { useBrand } from '../component/contextData';
 import Image from "next/image";
 
 const ServicesPage = () => {
-    const { brand } = useBrand();
-  const [loaded, setLoaded] = useState(false);
+  const [loaded] = useState(true);
   const router = useRouter();
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
 
   const handleImageClick = (slug) => {
     router.push(`/services/${slug}`);
@@ -25,14 +20,9 @@ const ServicesPage = () => {
       className={`portfolio-page-container pt-24 flex flex-col items-center font-primary min-h-screen px-4 py-8 pb-16 bg-gray-50 ${loaded ? "animate-page-load" : ""
         }`}
     >
-      {brand === "MBUDev" ? (
-        <h2 className="text-xl font-bold text-gray-800 text-center mb-4 font-primary">
-          Welcome to MBUDevs Technologies</h2>
-      ) : (
-        <h2 className="text-xl font-bold text-gray-800 text-center mb-4 font-primary">
-          Welcome to BizzDev Technologies</h2>
-      )
-      }
+      <h2 className="text-xl font-bold text-gray-800 text-center mb-4 font-primary">
+        Welcome to MBUDevs Technologies
+      </h2>
 
       <h3 className="text-lg font-semibold text-gray-600 text-center mb-12 font-primary">Your trusted partner in digital innovation. We specialize in crafting powerful web, mobile,and cloud-based<br />  software solutions tailored to your business needs. From startups to enterprises, we help organizations<br />  streamline processes, boost efficiency, and scale with confidence.
 
@@ -49,7 +39,7 @@ const ServicesPage = () => {
                 src={item.image || "/placeholder.svg"}
                 alt={`Project ${index + 1}`}
                 fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
                 className="object-cover rounded-t-lg transition-transform duration-500 font-primary ease-in-out"
               />
             </div>

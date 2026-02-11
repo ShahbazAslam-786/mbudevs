@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import { FaArrowsAlt } from "react-icons/fa";
-import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
 
 export const ImageModel = ({ item }) => {
+  useEffect(() => {
+    import("react-multi-carousel/lib/styles.css");
+  }, []);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageIndex, setModalImageIndex] = useState(0);
 
@@ -78,19 +81,12 @@ export const ImageModel = ({ item }) => {
               onClick={() => openModal(index)}
             >
               <div className="relative w-full h-[400px] rounded-[16px] mx-auto mb-10 overflow-hidden">
-                {/** Ensure the LCP image is eagerly loaded when present. */}
                 <Image
                   src={image || "/placeholder.svg"}
                   alt={`Additional Image ${index + 1}`}
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 640px) 90vw, 100vw"
                   className="w-full h-full object-cover rounded-[16px]"
-                  loading={
-                    index === 0 || image === "/assets/Home_Schooling_four.png"
-                      ? "eager"
-                      : "lazy"
-                  }
-                  priority={index === 0 || image === "/assets/Home_Schooling_four.png"}
                 />
               </div>
 
@@ -115,8 +111,7 @@ export const ImageModel = ({ item }) => {
                 src={item.additionalImages[modalImageIndex] || "/placeholder.svg"}
                 alt={`Enlarged Image ${modalImageIndex + 1}`}
                 fill
-                sizes="100vw"
-                priority
+                sizes="(max-width: 640px) 90vw, 100vw"
                 className="w-full object-contain rounded-lg mx-auto"
               />
             </div>

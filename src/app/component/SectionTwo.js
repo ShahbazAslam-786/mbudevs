@@ -9,6 +9,7 @@ const SectionTwo = () => (
                 <Image
                     src={NlpImg}
                     alt="NLP Solutions"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 18vw"
                     className="h-44 w-44 md:h-40 md:w-40 object-contain rounded-lg"
                 />
 

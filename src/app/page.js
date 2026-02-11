@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-
+"use client";
 import { LetsWorkHome } from "../app/component/LetsWorkHome";
 import NoiseFitCaseStudy from "../app/component/NoiseFitCaseStudy";
 import DomainsGrid from "../app/component/DomainsGrid";
@@ -12,7 +11,9 @@ import { Sameto } from "./component/Sameto";
 const Home = () => {
 
   return (
-    <div className="pt-20">
+    <div className="pt-5">
+      <section className="px-2 pb-2 text-center">
+      </section>
       <LetsWorkHome />
       <NoiseFitCaseStudy />
       <DomainsGrid />

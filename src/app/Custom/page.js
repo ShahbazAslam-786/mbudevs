@@ -1,12 +1,16 @@
 "use client"
 
+import { useEffect } from "react";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import PortfolioDataList from "../../Data/PortfolioDataList";
 import { useNavigate } from "react-router-dom";
 import Image from "next/image";
 
 export const ProjectSlider = () => {
+  useEffect(() => {
+    import("react-multi-carousel/lib/styles.css");
+  }, []);
+
   const navigate = useNavigate();
 
   const responsive = {
@@ -76,9 +80,7 @@ export const ProjectSlider = () => {
                       <Image
                         src={item.src}
                         alt={item.alt}
-                        loading="eager"
-                        decoding="async"
-                        fetchPriority="high"
+                        sizes="(max-width: 449px) 90vw, (max-width: 1024px) 45vw, (max-width: 1150px) 30vw, 25vw"
                         className="w-full h-full object-cover mb-[2px]"
                       />
                     </div>

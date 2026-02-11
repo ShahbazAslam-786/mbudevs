@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaChevronDown, FaTimes, FaBars } from "react-icons/fa";
 import logo from "../../../public/assets/MBUdevs.png";
-import { useBrand } from "./contextData";
 
 const menuItems = [
   { label: "Projects", path: "/projects" },
@@ -21,7 +20,6 @@ const Navbar = () => {
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const timeoutRef = useRef(null);
 
-  const { brand } = useBrand();
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -36,20 +34,16 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Desktop Navbar */}
       <div className="bg-white text-gray-700 p-2 shadow-md fixed top-0 left-0 w-full z-50">
         <div className="bg-white text-gray-700 px-4 sm:px-6 shadow-md fixed top-0 left-0 w-full z-50 h-16 flex items-center">
           <Link href="/" className="mr-6 flex-shrink-0">
-            {brand === "MBUDev" ? (
-              <Image
-                src={logo}
-                alt={brand}
-                className="h-[130px] w-auto object-contain"
-                priority
-              />
-            ) : (
-              <h2 className="text-blue-600 text-2xl font-[800]">BizzDevs</h2>
-            )}
+            <Image
+              src={logo}
+              alt="MBUDevs"
+              className="h-[96px] sm:h-[130px] w-auto object-contain"
+              priority
+              sizes="(max-width: 640px) 96px, 130px"
+            />
           </Link>
 
           <div className="hidden sm:flex items-center space-x-6 font-bold relative">

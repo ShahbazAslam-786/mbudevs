@@ -85,6 +85,7 @@ const MobileAppSection = () => {
               alt="iOS App Development"
               width={1200}
               height={800}
+              sizes="(max-width: 640px) 70vw, (max-width: 1024px) 35vw, 25vw"
               className="object-cover"
               priority
             />
@@ -100,6 +101,7 @@ const MobileAppSection = () => {
             alt="Android App Development"
             width={1200}
             height={800}
+            sizes="(max-width: 640px) 70vw, (max-width: 1024px) 35vw, 25vw"
             className="object-cover"
           />
         </div>
@@ -133,6 +135,7 @@ const MobileAppSection = () => {
               alt="Hybrid App Development"
               width={1200}
               height={800}
+              sizes="(max-width: 640px) 70vw, (max-width: 1024px) 35vw, 25vw"
               className="object-cover"
             />
           </div>
@@ -153,6 +156,7 @@ const MobileAppSection = () => {
                   alt={card.alt}
                   width={120}
                   height={120}
+                  sizes="(max-width: 640px) 96px, 120px"
                   className="object-contain"
                 />
               </div>

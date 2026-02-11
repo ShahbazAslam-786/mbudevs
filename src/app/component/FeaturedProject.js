@@ -12,7 +12,12 @@ const FeaturedProject = () => {
 
         <div className="relative flex flex-col md:flex-row items-center bg-blue-900 py-8 sm:py-12 rounded-lg px-6 sm:px-12 max-w-full md:max-w-4xl md:h-auto shadow-lg">
           <div className="flex-shrink-0 md:mr-8 w-full md:w-1/3 flex justify-center md:justify-start">
-            <Image src={granny} alt="Mobile Mockup" className="w-48 sm:w-56 md:w-64 lg:w-72 rounded-xl object-cover" />
+            <Image
+              src={granny}
+              alt="Mobile Mockup"
+              sizes="(max-width: 640px) 160px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 288px"
+              className="w-40 sm:w-56 md:w-64 lg:w-72 rounded-xl object-cover"
+            />
           </div>
 
           <div className="flex flex-col text-white text-center md:text-left w-full md:w-2/3 px-4 sm:px-10">

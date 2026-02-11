@@ -34,7 +34,7 @@ const handleImageClick = (item) => {
                 alt={item.alt}
                 className="card-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
                 fill
-                sizes="(max-width: 549px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="(max-width: 549px) 90vw, (max-width: 1024px) 45vw, 33vw"
                 style={{ objectFit: "cover", borderRadius: "20px" }}
                 loading={item.src === "/assets/giftya-web-1.png" ? "eager" : "lazy"}
               />

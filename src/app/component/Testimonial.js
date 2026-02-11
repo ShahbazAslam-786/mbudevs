@@ -1,8 +1,6 @@
-import { useBrand } from "../component/contextData";
 
 export const Testimonial = () => {
 
-    const {brand} = useBrand();
 
   return (
     <div className=" w-full pt-12">
@@ -15,8 +13,8 @@ export const Testimonial = () => {
                 Our clients are so much satisfied by working with us. The 100%
                 satisfaction ratio and tremendous respect showcase the affection
                 of clients towards the company. Each client is like a star in
-                the constellation, without it the beauty is incomplete.  Let's have a look at what they have to say about their
-                experience with {brand === "MBUDev" ? "MbuDevs" : "BizzDevs"}.
+                the constellation, without it the beauty is incomplete.  Let&apos;s have a look at what they have to say about their
+                experience with MBUDevs.
               </p>
 
             </div>

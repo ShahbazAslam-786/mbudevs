@@ -26,7 +26,7 @@ const DomainsWorkedOn = () => {
 
   return (
     <div className="bg-white flex flex-col items-center text-black p-10">
-      <h2 className="text-xl font-bold mb-8 text-black font-primary">Domains we've worked on</h2>
+      <h2 className="text-xl font-bold mb-8 text-black font-primary">Domains we&apos;ve worked on</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 w-full max-w-4xl border-t border-l border-gray-200">
         {domains.map((domain, index) => (
           <div

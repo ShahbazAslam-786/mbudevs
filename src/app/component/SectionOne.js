@@ -22,6 +22,7 @@ const SectionOne = () => (
                 <Image
                     src={TrainingImg}
                     alt="Model Training"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 18vw"
                     className="h-52 w-52 md:h-72 md:w-72 object-contain rounded-lg"
                 />
 

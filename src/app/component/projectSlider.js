@@ -1,12 +1,15 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import PortfolioDataList from "../data/Portfoliodatalist";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export const ProjectSlider = () => {
+  useEffect(() => {
+    import("react-multi-carousel/lib/styles.css");
+  }, []);
+
   const router = useRouter();
 
   const responsive = {
@@ -77,7 +80,7 @@ export const ProjectSlider = () => {
                         src={item.src}
                         alt={item.alt}
                         fill
-                        sizes="(max-width: 449px) 100vw, (max-width: 1024px) 50vw, (max-width: 1150px) 33vw, 25vw"
+                        sizes="(max-width: 449px) 90vw, (max-width: 1024px) 45vw, (max-width: 1150px) 30vw, 25vw"
                         loading={item.src === "/assets/giftya-web-1.png" ? "eager" : "lazy"}
                         className="object-cover mb-[2px]"
                       />

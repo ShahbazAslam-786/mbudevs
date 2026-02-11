@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { useBrand } from "../component/contextData";
 
 // ===== Images Imports =====
 import Shafiq from "../../../public/assets/shafik.jpeg";
@@ -10,12 +9,9 @@ import ahmad from "../../../public/assets/mahmad.jpeg";
 import umar from "../../../public/assets/umar-bhai.jpg";
 import faizan from "../../../public/assets/faizan.jpeg";
 import attiqa from "../../../public/assets/Attiqa.jpg";
-import abdullah from "../../../public/assets/abdullah.jpeg";
 import abdullahBhai from "../../../public/assets/Abdullah bahi.jpeg";
-import jamal from "../../../public/assets/Jamal_lead_Business_developer.png";
 import zain from "../../../public/assets/zain.jpg";
 import usama from "../../../public/assets/usama.jpeg";
-import umer from "../../../public/assets/UmerFarooq.jpg";
 import awais from "../../../public/assets/Awais.jpg";
 import shahbaz from "../../../public/assets/shahbaz.jpg";
 import suhaib from "../../../public/assets/suhab.jpg";
@@ -26,20 +22,16 @@ const teamMembers = [
   { id: 2, name: "Umar Rasheed", title: "CTO and Co-Founder", linkedin: "https://www.linkedin.com/in/umar-rasheed/", image: umar },
   { id: 3, name: "Faizan Afzal", title: "Lead FullStack Engineer", linkedin: "https://www.linkedin.com/in/faizanafzal54/", image: faizan },
   { id: 4, name: "Attiqa", title: "Creative Design Lead (UI/UX)", image: attiqa },
-  { id: 5, name: "Abdullah Chaudhry", title: "Sales & Marketing", linkedin: "https://pk.linkedin.com/in/abdullah-chaudhry-861b74232", image: abdullah },
   { id: 6, name: "Muhammad Abdullah", title: "Lead Software Quality Assurance", linkedin: "https://www.linkedin.com/in/faizanafzal54/", image: abdullahBhai },
-  { id: 7, name: "Jamal Hajvary", title: "Lead Business Developer", linkedin: "https://www.linkedin.com/in/faizanafzal54/", image: jamal },
   { id: 8, name: "Zain Ali", title: "Senior Software Engineer", linkedin: "https://www.linkedin.com/in/zain-ali-17b988361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", image: zain },
   { id: 9, name: "Usama Naseer", title: "Senior Software Engineer", linkedin: "https://www.linkedin.com/in/faizanafzal54/", image: usama },
-  { id: 10, name: "Umer Farooq", title: "Senior Software Engineer", image: umer },
+  { id: 12, name: "Shahbaz Aslam", title: "Software Engineer", linkedin: "http://www.linkedin.com/in/zunnurain-builders-ba6aa7343", image: shahbaz },
   { id: 11, name: "Muhammad Awais", title: "Shopify Engineer", linkedin: "http://www.linkedin.com/in/awais-butt-504467343", image: awais },
-  { id: 12, name: "Shahbaz Aslam", title: "Associate Software Engineer", linkedin: "http://www.linkedin.com/in/zunnurain-builders-ba6aa7343", image: shahbaz },
   { id: 13, name: "Suhaib", title: "Junior Software Engineer", linkedin: "http://www.linkedin.com/in/suhaib-with-code-10964632a", image: suhaib },
 ];
 
 const TeamSection = () => {
   const [expanded, setExpanded] = useState(false);
-  const { brand } = useBrand();
 
   const handleProfileClick = (linkedin) => {
     if (linkedin) window.open(linkedin, "_blank", "noopener,noreferrer");
@@ -58,9 +50,9 @@ const TeamSection = () => {
               </h2>
 
               <p className="text-gray-600 text-lg font-primary leading-relaxed">
-                At {brand === 'MBUDev' ? "MBUDevs" : "BizzDevs"}, we've seen firsthand how the right blend of
+                At MBUDevs, we&apos;ve seen firsthand how the right blend of
                 creativity and technology can do more than just improve
-                businesses—it can truly transform entire industries. In today's
+                businesses—it can truly transform entire industries. In today&apos;s
                 fast-paced world, constantly reshaped by AI and digital innovation, our mission is clear: to help
                 organizations like yours tackle complex challenges and achieve sustainable growth.
                 {!expanded && (
@@ -74,8 +66,8 @@ const TeamSection = () => {
                 {expanded && (
                   <>
                     <br />
-                    We don't just write code; we offer clarity, strategy, and partnership. Whether navigating
-                    digital transformation, building AI solutions, or scalable platforms, we're here for your journey.
+                    We don&apos;t just write code; we offer clarity, strategy, and partnership. Whether navigating
+                    digital transformation, building AI solutions, or scalable platforms, we&apos;re here for your journey.
                     <br />
                     Our approach is innovation, simplicity, and trust. Your goals fuel our work, and your success
                     is the ultimate measure of our efforts. Every solution reflects strategic thinking and long-term value.
@@ -83,8 +75,8 @@ const TeamSection = () => {
                     Clients come with needs from chatbots, web apps, BI dashboards, workflow automation, to AI integration.
                     We bring strategic foresight and technical expertise.
                     <br />
-                    Thank you for considering {brand === 'MBUDev' ? 'MBUDevs' : 'BizzDevs'} as your digital transformation partner.
-                    Let's build something incredible together.
+                    Thank you for considering MBUDevs as your digital transformation partner.
+                    Let&apos;s build something incredible together.
                     <br />
                     Warm regards,
                     <br />
@@ -111,6 +103,8 @@ const TeamSection = () => {
                 <Image
                   src={Shafiq}
                   alt="Shafique Chaudhry"
+                  priority
+                  sizes="(max-width: 640px) 80vw, (max-width: 1024px) 50vw, 35vw"
                   width="auto"
                   height="auto"
                   className="object-cover rounded-lg w-auto h-auto"
@@ -143,7 +137,7 @@ const TeamSection = () => {
           {teamMembers.map((member) => (
             <div key={member.id} className="flex flex-col items-center">
               <div
-                className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden cursor-pointer transition-transform hover:scale-105"
+                className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden cursor-pointer transition-transform hover:scale-105"
                 onClick={() => handleProfileClick(member.linkedin)}
               >
                 <Image
@@ -151,6 +145,7 @@ const TeamSection = () => {
                   alt={member.name}
                   width={240}
                   height={240}
+                  sizes="(max-width: 640px) 10rem, (max-width: 1024px) 12rem, 14rem"
                   className="w-full h-full object-cover grayscale"
                 />
               </div>

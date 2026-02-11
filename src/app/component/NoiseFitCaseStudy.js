@@ -11,7 +11,8 @@ const NoiseFitCaseStudy = () => {
         <Image
           src={giftLogo}
           alt="Noisefit Logo"
-          className="w-24 sm:w-32 mt-6 sm:mt-8 mb-6 sm:mb-8 mx-auto lg:mx-0"
+          sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 128px"
+          className="w-20 sm:w-24 md:w-32 mt-6 sm:mt-8 mb-6 sm:mb-8 mx-auto lg:mx-0"
         />
         <h1 className="text-xl font-bold font-primary mt-2">
           GiftYa is a digital gifting platform that allows users to send personalized e-gift cards via text or email.
@@ -35,7 +36,8 @@ const NoiseFitCaseStudy = () => {
         <Image
           src={newGiftya}
           alt="Noisefit App"
-          className="relative w-32 sm:w-48 md:w-56 h-auto z-10 mt-[-20px] sm:mt-[-40px]"
+          sizes="(max-width: 640px) 112px, (max-width: 768px) 192px, 224px"
+          className="relative w-28 sm:w-48 md:w-56 h-auto z-10 mt-[-20px] sm:mt-[-40px]"
         />;
       </div>
     </div>

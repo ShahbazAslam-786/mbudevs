@@ -2,12 +2,10 @@
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaSoundcloud, FaSpotify } from "react-icons/fa"
 import logo from "../../../public/assets/MBUdevs.png"
-import { useBrand } from "./contextData";
 import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
-  const { brand } = useBrand();
 
   return (
     <footer className="bg-[#1a1f25] text-white">
@@ -170,18 +168,14 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="border-r border-gray-800 pr-8 pt-3">
 
-                {brand === 'MBUDev' ? (
-                  <Link href="/">
-                    <Image
-                      src={logo}
-                      alt={brand}
-                      className="w-40 h-10 object-cover"
-                    />
-                  </Link>
-                ) : (
-                  <Link href="/" className="text-3xl text-bold font-primary">BIZZ DEVS</Link>
-                )
-                }
+                <Link href="/">
+                  <Image
+                    src={logo}
+                    alt="MBUDevs"
+                    sizes="(max-width: 640px) 128px, 160px"
+                    className="w-32 sm:w-40 h-10 object-cover"
+                  />
+                </Link>
 
               </div>
 
@@ -194,16 +188,9 @@ const Footer = () => {
 
               <div className="border-r border-gray-800 pr-8 font-primary">
                 <h4 className="text-sm font-semibold mb-2 font-primary">Contact Us</h4>
-                {brand === "MBUDev" ? (
-                  <Link href="mailto:services@tkxel.com" className="text-sm text-gray-400 block hover:text-white">
-                    umar@mbudevs.com
-                  </Link>
-                ) : (
-                  <Link href="mailto:services@tkxel.com" className="text-sm text-gray-400 block hover:text-white">
-                    services@bizzDevs.com
-                  </Link>
-                )
-                }
+                <Link href="mailto:services@tkxel.com" className="text-sm text-gray-400 block hover:text-white">
+                  umar@mbudevs.com
+                </Link>
 
                 {/* <a href="tel:(202)978-3410" className="text-sm font-primary text-gray-400 block hover:text-white">
                   (202) 978-3410
@@ -214,7 +201,7 @@ const Footer = () => {
                 <h4 className="text-sm font-semibold font-primary mb-2">Follow Us</h4>
                 <div className="flex space-x-4">
                   <Link
-                    href="https://linkedin.com/in/bizzdevs"
+                    href="https://linkedin.com/in/mbudevs"
                     className="text-gray-400 hover:text-white"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -230,7 +217,7 @@ const Footer = () => {
                     <FaFacebookF size={20} />
                   </Link>
                   <Link
-                    href="https://instagram.com/bizzdevs"
+                    href="https://instagram.com/mbudevs"
                     className="text-gray-400 hover:text-white"
                     target="_blank"
                     rel="noopener noreferrer"

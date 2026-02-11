@@ -38,7 +38,13 @@ const TechExpertise = () => {
         {displayedLogos.map((logo, index) => (
           <div key={index} className={`flex justify-center items-center p-4 border-b border-gray-300 ${index % 3 !== 2 ? 'border-r' : ''}`}>
             {logo.src ? (
-              <Image src={logo.src} alt={logo.alt} className="w-100 h-16 md:w-100 md:h-20" style={{ width: 'auto' }} />
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                sizes="(max-width: 640px) 25vw, (max-width: 768px) 28vw, 160px"
+                className="w-100 h-16 md:w-100 md:h-20"
+                style={{ width: 'auto' }}
+              />
             ) : (
               <span className="text-gray-900 font-bold font-primary">{logo.alt}</span>
             )}

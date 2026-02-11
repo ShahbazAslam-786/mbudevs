@@ -16,7 +16,8 @@ export const Sameto = () => {
             <Image
               src={clublaxWebp}
               alt="SkyMD Logo"
-              className="w-32 sm:w-48 h-auto"
+              sizes="(max-width: 640px) 112px, (max-width: 768px) 160px, 192px"
+              className="w-28 sm:w-40 md:w-48 h-auto"
             />
             <div className="mt-4 sm:mt-0">
               <p className="text-xl font-semibold text-white font-primary">ClubLax, Lacrosse.org, real time scoring</p>
@@ -39,8 +40,13 @@ export const Sameto = () => {
           </ul>
         </div>
 
-        <div className="w-48 sm:w-56 md:w-64 lg:w-72   overflow-hidden mt-6 md:mt-0">
-          <Image src={clublaxPic} alt="Mobile Mockup" className="w-full h-auto" />
+        <div className="w-40 sm:w-56 md:w-64 lg:w-72 overflow-hidden mt-6 md:mt-0">
+          <Image
+            src={clublaxPic}
+            alt="Mobile Mockup"
+            sizes="(max-width: 640px) 160px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 288px"
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </section>
